@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Frontend Engineering Intern",
+    "company": "Northlane Software",
+    "location": "Remote",
+    "description": "Work on our React-based customer dashboard alongside senior engineers, shipping real features every sprint.",
+    "requiredSkills": ["javascript", "react", "css", "git"],
+    "applyUrl": "https://example.com/careers/frontend-intern"
+  },
+  {
+    "title": "Backend Engineering Intern",
+    "company": "Pinecrest Data",
+    "location": "Bengaluru, India",
+    "description": "Build and maintain REST APIs powering our analytics platform, with a focus on database performance.",
+    "requiredSkills": ["node.js", "express", "mongodb", "sql"],
+    "applyUrl": "https://example.com/careers/backend-intern"
+  },
+  {
+    "title": "Data Analyst Intern",
+    "company": "Fieldstone Analytics",
+    "location": "Hybrid - Pune, India",
+    "description": "Support the analytics team with SQL queries, dashboards, and ad-hoc reporting for product teams.",
+    "requiredSkills": ["sql", "excel", "python", "data visualization"],
+    "applyUrl": "https://example.com/careers/data-analyst-intern"
+  },
+  {
+    "title": "Machine Learning Intern",
+    "company": "Alderbrook AI",
+    "location": "Remote",
+    "description": "Prototype and evaluate ML models for our recommendation system under the guidance of our ML team.",
+    "requiredSkills": ["python", "machine learning", "pandas", "sql"],
+    "applyUrl": "https://example.com/careers/ml-intern"
+  },
+  {
+    "title": "Full Stack Engineering Intern",
+    "company": "Rivergate Labs",
+    "location": "Hyderabad, India",
+    "description": "Own small features end-to-end across our React frontend and Node backend.",
+    "requiredSkills": ["javascript", "react", "node.js", "mongodb", "git"],
+    "applyUrl": "https://example.com/careers/fullstack-intern"
+  },
+  {
+    "title": "DevOps Intern",
+    "company": "Harborview Systems",
+    "location": "Remote",
+    "description": "Help automate our CI/CD pipelines and manage containerized deployments.",
+    "requiredSkills": ["docker", "linux", "ci/cd", "git"],
+    "applyUrl": "https://example.com/careers/devops-intern"
+  },
+  {
+    "title": "Mobile App Development Intern",
+    "company": "Bluecliff Mobile",
+    "location": "Chennai, India",
+    "description": "Build features for our React Native app used by 500K+ monthly active users.",
+    "requiredSkills": ["react native", "javascript", "rest apis", "git"],
+    "applyUrl": "https://example.com/careers/mobile-intern"
+  },
+  {
+    "title": "QA & Test Automation Intern",
+    "company": "Westfold Quality Labs",
+    "location": "Remote",
+    "description": "Write and maintain automated test suites for our web application using modern testing frameworks.",
+    "requiredSkills": ["javascript", "testing", "selenium", "git"],
+    "applyUrl": "https://example.com/careers/qa-intern"
+  },
+  {
+    "title": "Cloud Engineering Intern",
+    "company": "Summit Cloud Partners",
+    "location": "Gurugram, India",
+    "description": "Support our cloud infrastructure team with AWS resource management and cost optimization projects.",
+    "requiredSkills": ["aws", "linux", "python", "networking"],
+    "applyUrl": "https://example.com/careers/cloud-intern"
+  },
+  {
+    "title": "Product Analytics Intern",
+    "company": "Cedarwood Products",
+    "location": "Remote",
+    "description": "Work with product managers to define and track metrics for new feature launches.",
+    "requiredSkills": ["sql", "data visualization", "excel", "communication"],
+    "applyUrl": "https://example.com/careers/product-analytics-intern"
+  }
+]
