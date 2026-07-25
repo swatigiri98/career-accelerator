@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL || "https://career-accelerator-62us.onrender.com/api",
+  baseURL: "https://career-accelerator-62us.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {
