@@ -1,3 +1,4 @@
+import { useAuth } from "../context/AuthContext.jsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Moon, Sun, TrendingUp } from "lucide-react";
@@ -12,6 +13,7 @@ const NAV_LINKS = [
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const { isAuthenticated } = useAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -42,19 +44,30 @@ function Navbar() {
           >
             {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
-          <Link
+        {isAuthenticated ? (
+        <Link
+          to="/dashboard"
+          className="rounded-lg bg-amber-400 px-4 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-600"
+        >
+          Go to Dashboard
+        </Link>
+        ) : (
+        <>
+        <Link
             to="/login"
             className="text-sm font-medium text-paper-600 transition hover:text-paper-900 dark:text-ink-200 dark:hover:text-ink-50"
-          >
+        >
             Login
-          </Link>
-          <Link
+        </Link>
+        <Link
             to="/signup"
             className="rounded-lg bg-amber-400 px-4 py-2 text-sm font-semibold text-ink-950 transition hover:bg-amber-600"
-          >
-            Get Started
-          </Link>
-        </div>
+        >
+          Get Started
+        </Link>
+        </>
+      )}
+      </div>
 
         <button
           className="md:hidden"
@@ -79,10 +92,17 @@ function Navbar() {
                 {link.label}
               </a>
             ))}
+
             <div className="flex items-center justify-between border-t border-paper-200 pt-4 dark:border-ink-800">
-              <Link to="/login" className="text-sm font-medium text-paper-600 dark:text-ink-200">
-                Login
-              </Link>
+          {isAuthenticated ? (
+            <Link to="/dashboard" className="text-sm font-medium text-paper-600 dark:text-ink-200">
+              Dashboard
+            </Link>
+          ) : (
+            <Link to="/login" className="text-sm font-medium text-paper-600 dark:text-ink-200">
+              Login
+            </Link>
+          )}
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle color theme"
@@ -91,12 +111,14 @@ function Navbar() {
                 {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
               </button>
             </div>
-            <Link
-              to="/signup"
-              className="rounded-lg bg-amber-400 px-4 py-2 text-center text-sm font-semibold text-ink-950"
-            >
-              Get Started
-            </Link>
+          {!isAuthenticated && (
+          <Link
+            to="/signup"
+            className="rounded-lg bg-amber-400 px-4 py-2 text-center text-sm font-semibold text-ink-950"
+          >
+            Get Started
+          </Link>
+        )}
           </div>
         </div>
       )}
