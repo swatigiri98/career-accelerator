@@ -27,14 +27,14 @@ function Footer() {
               internship matching.
             </p>
             <div className="mt-5 flex items-center gap-4">
-              <a href="#" aria-label="GitHub" className="text-paper-600 hover:text-amber-400 dark:text-ink-200">
+              <a href="https://github.com/swatigiri98/career-accelerator" aria-label="GitHub" className="text-paper-600 hover:text-amber-400 dark:text-ink-200">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-paper-600 hover:text-amber-400 dark:text-ink-200">
+              <a href="https://www.linkedin.com/in/swati-giri-1206a4314/" aria-label="LinkedIn" className="text-paper-600 hover:text-amber-400 dark:text-ink-200">
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:hello@careeraccelerator.app"
+                href="mailto:swatihustle802@gmail.com"
                 aria-label="Email"
                 className="text-paper-600 hover:text-amber-400 dark:text-ink-200"
               >
