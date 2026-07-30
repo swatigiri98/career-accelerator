@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FileSearch, Mic, Map, Briefcase, ArrowRight } from "lucide-react";
+import { FileSearch, Mic, Map, Briefcase, ArrowRight, TrendingUp } from "lucide-react";
 import { getDashboardRequest } from "../services/dashboardService.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import Card from "../components/ui/Card.jsx";
@@ -8,15 +8,31 @@ import Button from "../components/ui/Button.jsx";
 import LoadingSpinner from "../components/ui/LoadingSpinner.jsx";
 import ScoreGauge from "../components/ui/ScoreGauge.jsx";
 
+const SCORE_SNAPSHOT_KEY = "careerScoreSnapshot";
+
 function DashboardPage() {
   const { user } = useAuth();
   const [dashboard, setDashboard] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [scoreChange, setScoreChange] = useState(null); // { from, to } while the toast is showing
 
   useEffect(() => {
     getDashboardRequest()
-      .then((res) => setDashboard(res.data.dashboard))
+      .then((res) => {
+        const data = res.data.dashboard;
+        setDashboard(data);
+
+        const newScore = data.careerScore.score;
+        const previousScore = localStorage.getItem(SCORE_SNAPSHOT_KEY);
+
+        if (previousScore !== null && Number(previousScore) !== newScore) {
+          setScoreChange({ from: Number(previousScore), to: newScore });
+          setTimeout(() => setScoreChange(null), 5000);
+        }
+
+        localStorage.setItem(SCORE_SNAPSHOT_KEY, String(newScore));
+      })
       .catch((err) => setError(err.response?.data?.message || "Could not load your dashboard"))
       .finally(() => setLoading(false));
   }, []);
@@ -25,6 +41,17 @@ function DashboardPage() {
 
   return (
     <div>
+    {scoreChange && (
+        <div className="animate-fade-up mb-6 flex items-center gap-3 rounded-xl border border-signal-green/30 bg-signal-green/10 px-4 py-3">
+          <TrendingUp className="h-5 w-5 flex-shrink-0 text-signal-green" />
+          <p className="text-sm font-medium text-signal-green">
+            Score {scoreChange.to > scoreChange.from ? "improved" : "changed"}: {scoreChange.from} →{" "}
+            {scoreChange.to}
+            {scoreChange.to > scoreChange.from ? " 🎉" : ""}
+          </p>
+        </div>
+      )}
+        
       <h1 className="mb-1 text-2xl font-bold text-paper-900 dark:text-ink-50">
         Welcome back, {user?.name?.split(" ")[0]}
       </h1>
