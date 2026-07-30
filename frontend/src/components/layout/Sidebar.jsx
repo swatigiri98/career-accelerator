@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { LayoutDashboard, FileSearch, Mic, Map, Briefcase, LogOut, TrendingUp, Moon, Sun } from "lucide-react";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { useTheme } from "../../context/ThemeContext.jsx";
@@ -17,10 +17,13 @@ function Sidebar() {
 
   return (
     <aside className="flex h-screen w-64 flex-shrink-0 flex-col border-r border-paper-200 bg-paper-0 dark:border-ink-800 dark:bg-ink-900">
-      <div className="flex items-center gap-2 border-b border-paper-200 px-6 py-5 font-display text-lg font-bold dark:border-ink-800">
+      <Link
+        to="/"
+        className="flex items-center gap-2 border-b border-paper-200 px-6 py-5 font-display text-lg font-bold dark:border-ink-800"
+      >
         <TrendingUp className="h-5 w-5 text-amber-400" strokeWidth={2.5} />
         Career<span className="text-amber-400">Accelerator</span>
-      </div>
+      </Link>
 
       <nav className="flex-1 space-y-1 px-3 py-4">
         {NAV_ITEMS.map(({ to, label, icon: Icon }) => (
