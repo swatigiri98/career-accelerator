@@ -5,7 +5,7 @@
     "location": "Remote",
     "description": "Work on our React-based customer dashboard alongside senior engineers, shipping real features every sprint.",
     "requiredSkills": ["javascript", "react", "css", "git"],
-    "applyUrl": "https://example.com/careers/frontend-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=Frontend%20Developer%20Intern%20React"
   },
   {
     "title": "Backend Engineering Intern",
@@ -13,7 +13,7 @@
     "location": "Bengaluru, India",
     "description": "Build and maintain REST APIs powering our analytics platform, with a focus on database performance.",
     "requiredSkills": ["node.js", "express", "mongodb", "sql"],
-    "applyUrl": "https://example.com/careers/backend-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=Backend%20Developer%20Intern%20Node.js"
   },
   {
     "title": "Data Analyst Intern",
@@ -21,7 +21,7 @@
     "location": "Hybrid - Pune, India",
     "description": "Support the analytics team with SQL queries, dashboards, and ad-hoc reporting for product teams.",
     "requiredSkills": ["sql", "excel", "python", "data visualization"],
-    "applyUrl": "https://example.com/careers/data-analyst-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=Data%20Analyst%20Intern"
   },
   {
     "title": "Machine Learning Intern",
@@ -29,7 +29,7 @@
     "location": "Remote",
     "description": "Prototype and evaluate ML models for our recommendation system under the guidance of our ML team.",
     "requiredSkills": ["python", "machine learning", "pandas", "sql"],
-    "applyUrl": "https://example.com/careers/ml-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=Machine%20Learning%20Intern"
   },
   {
     "title": "Full Stack Engineering Intern",
@@ -37,7 +37,7 @@
     "location": "Hyderabad, India",
     "description": "Own small features end-to-end across our React frontend and Node backend.",
     "requiredSkills": ["javascript", "react", "node.js", "mongodb", "git"],
-    "applyUrl": "https://example.com/careers/fullstack-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=Full%20Stack%20Developer%20Intern"
   },
   {
     "title": "DevOps Intern",
@@ -45,7 +45,7 @@
     "location": "Remote",
     "description": "Help automate our CI/CD pipelines and manage containerized deployments.",
     "requiredSkills": ["docker", "linux", "ci/cd", "git"],
-    "applyUrl": "https://example.com/careers/devops-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=DevOps%20Intern"
   },
   {
     "title": "Mobile App Development Intern",
@@ -53,7 +53,7 @@
     "location": "Chennai, India",
     "description": "Build features for our React Native app used by 500K+ monthly active users.",
     "requiredSkills": ["react native", "javascript", "rest apis", "git"],
-    "applyUrl": "https://example.com/careers/mobile-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=React%20Native%20Developer%20Intern"
   },
   {
     "title": "QA & Test Automation Intern",
@@ -61,7 +61,7 @@
     "location": "Remote",
     "description": "Write and maintain automated test suites for our web application using modern testing frameworks.",
     "requiredSkills": ["javascript", "testing", "selenium", "git"],
-    "applyUrl": "https://example.com/careers/qa-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=QA%20Automation%20Intern"
   },
   {
     "title": "Cloud Engineering Intern",
@@ -69,7 +69,7 @@
     "location": "Gurugram, India",
     "description": "Support our cloud infrastructure team with AWS resource management and cost optimization projects.",
     "requiredSkills": ["aws", "linux", "python", "networking"],
-    "applyUrl": "https://example.com/careers/cloud-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=Cloud%20Engineering%20Intern%20AWS"
   },
   {
     "title": "Product Analytics Intern",
@@ -77,6 +77,6 @@
     "location": "Remote",
     "description": "Work with product managers to define and track metrics for new feature launches.",
     "requiredSkills": ["sql", "data visualization", "excel", "communication"],
-    "applyUrl": "https://example.com/careers/product-analytics-intern"
+    "applyUrl": "https://www.linkedin.com/jobs/search/?keywords=Product%20Analyst%20Intern"
   }
 ]
