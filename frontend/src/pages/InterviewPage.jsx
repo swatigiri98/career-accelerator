@@ -3,6 +3,7 @@ import { Mic, MicOff, Volume2, CheckCircle2, AlertTriangle } from "lucide-react"
 import { startInterviewRequest, submitAnswerRequest } from "../services/interviewService.js";
 import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
+import SuccessToast from "../components/ui/SuccessToast.jsx";
 
 const SPEECH_RECOGNITION_SUPPORTED =
   typeof window !== "undefined" && (window.SpeechRecognition || window.webkitSpeechRecognition);
@@ -15,6 +16,7 @@ function InterviewPage() {
   const [submitting, setSubmitting] = useState(false);
   const [starting, setStarting] = useState(false);
   const [error, setError] = useState("");
+  const [toastMessage, setToastMessage] = useState("");
 
   const recognitionRef = useRef(null);
 
@@ -90,6 +92,10 @@ function InterviewPage() {
       const res = await submitAnswerRequest(session._id, currentQuestion._id, answerText);
       setSession(res.data.session);
       setAnswerText("");
+      if (res.data.session.completed) {
+    setToastMessage(`Interview complete! Average score: ${res.data.session.averageScore?.toFixed(1)}/10`);
+    setTimeout(() => setToastMessage(""), 5000);
+    }
     } catch (err) {
       setError(err.response?.data?.message || "Could not score that answer. Please try again.");
     } finally {
@@ -128,6 +134,7 @@ function InterviewPage() {
 
   return (
     <div>
+      <SuccessToast message={toastMessage} />
       <div className="mb-6 flex items-center justify-between">
         <h1 className="text-2xl font-bold text-paper-900 dark:text-ink-50">Mock Interview</h1>
         <span className="font-mono text-sm text-paper-600 dark:text-ink-200">

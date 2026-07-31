@@ -7,6 +7,7 @@ import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
 import LoadingSpinner from "../components/ui/LoadingSpinner.jsx";
 import ScoreGauge from "../components/ui/ScoreGauge.jsx";
+import ProfileChecklist from "../components/ProfileChecklist.jsx";
 
 const SCORE_SNAPSHOT_KEY = "careerScoreSnapshot";
 
@@ -73,6 +74,8 @@ function DashboardPage() {
           </Link>
         </Card>
       ) : (
+        <>
+          <ProfileChecklist dashboard={dashboard} />
         <div className="grid gap-6 md:grid-cols-3">
           <Card className="p-6 md:col-span-1">
             <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-paper-600 dark:text-ink-200">
@@ -153,6 +156,7 @@ function DashboardPage() {
             </Card>
           </div>
         </div>
+        </>
       )}
     </div>
   );

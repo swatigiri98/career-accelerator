@@ -4,6 +4,7 @@ import { uploadResumeRequest, getLatestResumeRequest } from "../services/resumeS
 import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
 import LoadingSpinner from "../components/ui/LoadingSpinner.jsx";
+import SuccessToast from "../components/ui/SuccessToast.jsx";
 
 function ResumePage() {
   const [resume, setResume] = useState(null);
@@ -12,6 +13,7 @@ function ResumePage() {
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
+  const [toastMessage, setToastMessage] = useState("");
 
   useEffect(() => {
     getLatestResumeRequest()
@@ -33,6 +35,7 @@ function ResumePage() {
     try {
       const res = await uploadResumeRequest(file, jobDescription);
       setResume(res.data.resume);
+      setToastMessage("Resume analyzed successfully!"); setTimeout(() => setToastMessage(""), 4000);
     } catch (err) {
       setError(err.response?.data?.message || "Upload failed. Please try again.");
     } finally {
@@ -44,6 +47,7 @@ function ResumePage() {
 
   return (
     <div>
+      <SuccessToast message={toastMessage} />
       <h1 className="mb-1 text-2xl font-bold text-paper-900 dark:text-ink-50">Resume Analyzer</h1>
       <p className="mb-8 text-sm text-paper-600 dark:text-ink-200">
         Upload your resume, optionally paste a target job description, and get a specific breakdown -
