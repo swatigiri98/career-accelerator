@@ -8,7 +8,7 @@ function Hero() {
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div className="animate-fade-up">
           <span className="mb-4 inline-block rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 font-mono text-xs font-medium text-amber-600 dark:text-amber-400">
-            One profile. Four tools. Zero guesswork.
+            One profile. Five tools. Zero guesswork.
           </span>
           <h1 className="mb-5 text-4xl font-bold leading-tight text-paper-900 dark:text-ink-50 md:text-5xl">
             Turn your resume into a job offer, one gap at a time.
