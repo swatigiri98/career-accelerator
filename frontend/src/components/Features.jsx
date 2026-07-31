@@ -1,4 +1,4 @@
-import { FileSearch, Mic, Map, Target } from "lucide-react";
+import { FileSearch, Mic, Map, Target, Briefcase, FileText } from "lucide-react";
 
 const FEATURES = [
   {
@@ -25,6 +25,18 @@ const FEATURES = [
     description:
       "Paste a target job description and see exactly what's missing, ranked by how much it matters for that specific role.",
   },
+  {
+    icon: Briefcase,
+    title: "Internship Matching",
+    description:
+      "Internships ranked by real skill overlap with your profile - with a plain-language reason for every match, not just a list.",
+  },
+  {
+    icon: FileText,
+    title: "Career Report",
+    description:
+      "A shareable, downloadable summary of your whole profile - Career Score, gaps, roadmap progress, and top matches in one PDF.",
+  },
 ];
 
 function Features() {
@@ -35,12 +47,12 @@ function Features() {
           Everything talks to everything else
         </h2>
         <p className="text-paper-600 dark:text-ink-200">
-          Four tools, one profile. Each one feeds the next, so your progress compounds instead of resetting
+          Six tools, one profile. Each one feeds the next, so your progress compounds instead of resetting
           every time you open a new tab.
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {FEATURES.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
