@@ -64,7 +64,7 @@ function Footer() {
 
       <div className="mt-10 border-t border-paper-200 pt-6 text-center text-xs text-paper-600 dark:border-ink-800 dark:text-ink-200">
         <p>© {new Date().getFullYear()} Career Accelerator. Built for Buildathon 2K26.</p>
-        <p className="mt-1">Built by Swati Giri</p>
+        <p className="mt-1">Built by Code&Queens</p>
       </div>
       </div>
     </footer>
