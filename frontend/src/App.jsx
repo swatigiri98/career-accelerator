@@ -12,6 +12,7 @@ import ResumePage from "./pages/ResumePage.jsx";
 import InterviewPage from "./pages/InterviewPage.jsx";
 import RoadmapPage from "./pages/RoadmapPage.jsx";
 import InternshipsPage from "./pages/InternshipsPage.jsx";
+import ReportPage from "./pages/ReportPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /**
@@ -43,6 +44,7 @@ function App() {
           <Route path="/interview" element={protectedPage(<InterviewPage />)} />
           <Route path="/roadmap" element={protectedPage(<RoadmapPage />)} />
           <Route path="/internships" element={protectedPage(<InternshipsPage />)} />
+          <Route path="/report" element={protectedPage(<ReportPage />)} />
 
           {/* Fallback */}
           <Route path="*" element={<NotFoundPage />} />

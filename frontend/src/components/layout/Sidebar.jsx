@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import { LayoutDashboard, FileSearch, Mic, Map, Briefcase, LogOut, TrendingUp, Moon, Sun } from "lucide-react";
+import { LayoutDashboard, FileSearch, Mic, Map, Briefcase, FileText, LogOut, TrendingUp, Moon, Sun } from "lucide-react";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { useTheme } from "../../context/ThemeContext.jsx";
 
@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { to: "/interview", label: "Mock Interview", icon: Mic },
   { to: "/roadmap", label: "Career Roadmap", icon: Map },
   { to: "/internships", label: "Internships", icon: Briefcase },
+  { to: "/report", label: "Career Report", icon: FileText },
 ];
 
 function Sidebar() {
@@ -16,7 +17,7 @@ function Sidebar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <aside className="flex h-screen w-64 flex-shrink-0 flex-col border-r border-paper-200 bg-paper-0 dark:border-ink-800 dark:bg-ink-900">
+    <aside className="flex h-screen w-64 flex-shrink-0 flex-col border-r border-paper-200 bg-paper-0 print:hidden dark:border-ink-800 dark:bg-ink-900">
       <Link
       to="/"
       className="flex items-center gap-2 border-b border-paper-200 px-6 py-5 font-display text-lg font-bold dark:border-ink-800"
